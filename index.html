@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Codeforces problem finding</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="Script.js"> </script>
+</head>
+<body>
+	<div class="container">
+		
+			<div id="mainframe">
+			<img src="cf.png">
+			<!-- <h2>Welcome to CODEFORCES Problem Finder</h2> -->
+
+				<div class = "details">
+						<label for="username">Username</label>
+						<input type="text" id="username" name="username" required>
+						<label for="options">Problem Rating</label>
+						<select id="rating" required>
+						<!-- <option value="800" id="r800">800</option>
+						<option value="900" id="r900">900</option>
+						<option value="1000" id="r1000">1000</option>
+						<option value="1100" id="r1100">1100</option>				 -->
+						</select>
+						
+						<button type="submit" onclick="gen()">Submit</button>
+				</div>
+
+
+			</div>
+	</div>
+</body>
+
+<script>
+    var rat = "";
+    for (let i = 800; i <= 3500; i += 100) {
+        rat += `<option value="${i}" id ="r${i}"> ${i} </option>` + "\n";
+    }
+    document.getElementById("rating").innerHTML = rat;
+</script>
+
+</html>
